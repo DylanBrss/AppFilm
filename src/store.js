@@ -4,7 +4,7 @@ import VuexPersist from "vuex-persist"
 
 //vuex-persist permet de stocker le state dnas le local storage
 // => en cas d'actualisation de la page, on garde la connexion utilisateur
-const VuexPersist = new VuexPersist({
+const vuexPersist = new VuexPersist({
     key: 'vuejs3movies',
     storage: window.localStorage
 })
@@ -89,5 +89,5 @@ export const store = createStore({
         }
     },
 
-    plugins: [VuexPersist.plugins]
+    plugins: [vuexPersist.plugins]
 })

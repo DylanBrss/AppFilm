@@ -1,29 +1,30 @@
-import { createRouter , createWebHistory} from 'vue-router'
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import { createWebHashHistory, createRouter } from "vue-router";
+import App from "./App.vue"
 
-import FrenchMovies from './components/FrenchMovies.vue'
-import AmericanMovies from './components/AmericanMovies.vue'
-import LastMovies from './components/LastMovies.vue'
-import MoviesDetails from './components/MoviesDetails.vue'
-import SearchMovies from './components/SearchMovies.vue'
-import TopRatedMovies from './components/TopRatedMovies.vue'
+// on importe les différents composants
+import AmericanMovies from "./components/AmericanMovies.vue";
+import FrenchMovies from "./components/FrenchMovies.vue";
+import Top50Movies from "./components/Top50Movies.vue";
+import LastMovies from "./components/LastMovies.vue";
+import SearchMovies from "./components/SearchMovies.vue";
+import MoviesDetails from "./components/MoviesDetails.vue";
 
-const routes = [
-    { path: '/frenchmovies', name:'FrenchMoviesM', component: FrenchMovies },
-    { path: '/americanmovies', name: 'AmericanMovies', component: AmericanMovies },
-    { path: '/lastmovies', name: 'LastMovies', component: LastMovies },
-    { path: '/moviesdetails', name: 'MoviesDetails', component: MoviesDetails },
-    { path: '/searchmovies', name: 'SearchMovies', component: SearchMovies },
-    { path: '/topratedmovies', name: 'TopRatedMovies', component: TopRatedMovies}
+// on déclare les routes
+const routes = [   
+// path = url
+  {path: '/', component: App  /* composant associé */},
+  {path: '/AmericanMovies', component: AmericanMovies},
+  {path: '/FrenchMovies', component: FrenchMovies},
+  {path: '/Top50Movies', component: Top50Movies},
+  {path: '/LastMovies', component: LastMovies},
+  {path: '/SearchMovies', component: SearchMovies},
+  {path: '/MoviesDetails', component: MoviesDetails}
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes
-})
+  history: createWebHashHistory(),
+  routes,
+});
 
-const app = createApp(App)
-
-app.use(router)
-app.mount('#app')
+createApp(App).use(router).mount('#app')

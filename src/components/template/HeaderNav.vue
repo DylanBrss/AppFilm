@@ -5,7 +5,7 @@
             <router-link to="/frenchmovies">Films français</router-link>
             <router-link to="/americanmovies">Films américains</router-link>
             <router-link to="/lastmovies">Films sortis en 2022</router-link>
-            <router-link to="/topratedmovies">Le 50 films les mieux notés</router-link>
+            <router-link to="/top50movies">Le 50 films les mieux notés</router-link>
             <router-link to="/searchmovies">Rechercher un film</router-link>
         </div>
     </header>
@@ -27,23 +27,37 @@ export default {
     padding: 20px;
 }
 
-.HeaderNav #home{
+.HeaderNav #home {
     color: #fff;
 }
 
 .HeaderNav a {
     color: grey;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
 .HeaderNav a:hover {
     color: white;
 }
 
-#nav{
+#nav {
     display: flex;
     justify-content: space-evenly;
 }
 
+@media screen and (max-width: 768px) {
+    .HeaderNav #home {
+        color: #fff;
+    }
 
+    .HeaderNav a {
+        color: grey;
+        text-decoration: none;
+    }
+
+    #nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
 </style>

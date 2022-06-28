@@ -1,26 +1,22 @@
 <template>
     <div class="container">
-        <div class="Moviescard" v-for="movie in movies" v-bind:key="movie.id" style="width: 18rem;">
-            <p class="id">{{ movie.id }}</p>
-            <h5 class="title">{{ movie.title }}</h5>
+        <div class="card p-3 my-3 " style="width: 18rem;">
+            <h5 class="title fw-bold fst-italic text-white">{{ title }}</h5>
+            <img v-bind:src="preUrl + poster_path" alt="moviePoster" />
             <div class="card-body">
-                <p class="img">{{ movie.poster_path }}</p>
-                <p class="sorti">Sortie : {{ movie.release_date }}</p>
-                <p class="notemoy">Note moyenne : {{ movie.vote_average }}</p>
-                <p class="resum">Résumé : {{ movie.overview }}</p>
+                <p class="sorti text-white"><b>Sortie :</b> {{ release_date }}</p>
+                <p class="notemoy text-white"><b>Note moyenne :</b> {{ vote_average }}</p>
+                <p class="resum text-white"><b>Résumé :</b> {{ overview.substring(0, 200) + "..."  }}</p>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import axios from 'axios';
-
 export default {
     name: "MovieCard",
     props: [
         "id",
-        "index",
         "title",
         "release_date",
         "vote_average",
@@ -29,15 +25,20 @@ export default {
     ],
     data() {
         return {
-            movie: null,
+            movies: null,
+            loading: true,
+            errored: false,
+            preUrl: "https://image.tmdb.org/t/p/original/",
         };
     },
-    created: function () {
-        axios
-            .get('https://api.themoviedb.org/3/movie/550?api_key=8d2265a50d4907bf6dd28e4ad308b47e')
-            .then(res => {
-                this.movie = res.data;
-            })
-    }
+
 }
 </script>
+<style>
+.card{
+    border: 1px solid;
+    background-color: #334;
+    height: 95%;
+}
+
+</style>

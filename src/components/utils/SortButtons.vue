@@ -10,12 +10,20 @@
 <script>
 
 export default {
-    name: "SortButtons"
+    name: "SortButtons",
+    data() {
+        return {
+            sortbynote: "",
+            sortbydate: "",
+            sortbytitle: "",
+            movies: null,
+        };
+    },
 }
 </script>
 
 <style>
-.btn{
+.btn {
     background-color: #334;
     color: #fff;
     margin-left: 20px;
