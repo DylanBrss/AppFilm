@@ -32,7 +32,7 @@ export default {
                 this.movies = firstAPIresponse.data.results;
             }),
             axios
-                .get("https://api.themoviedb.org/3/discover/movie?api_key=8d2265a50d4907bf6dd28e4ad308b47e&language=fr&include_adult=false&primary_release_year=2022&vote_count.gte=1000&page=1")
+                .get("https://api.themoviedb.org/3/discover/movie?api_key=8d2265a50d4907bf6dd28e4ad308b47e&language=fr&include_adult=false&primary_release_year=2022&vote_count.gte=1000&page=2")
                 .then(secondAPIresponse => {
                     secondAPIresponse.data.results.forEach(movie => {
                         this.movies.push(movie)

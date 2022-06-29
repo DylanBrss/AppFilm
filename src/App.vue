@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <h1 class="topTitle">vue js movies</h1>
+    <h1 class="topTitle">Cinérama</h1>
     <HeaderNav />
 
     <div class="container">
       <div v-if="$route.path == '/'">
         <!-- si la route est / (racine du site) -->
         <h1 class="pt-5 font-weight-light">
-          Vos films préférés sont sur VueJS Movies !
+          Vos films préférés sont sur CinéRama !
         </h1>
         <MoviesList :movies="movies" :loading="loading" :errored="errored" />
       </div>
@@ -48,7 +48,7 @@ export default {
         // console.log(this.movies)
       }),
       axios
-        .get("https://api.themoviedb.org/3/discover/movie?api_key=8d2265a50d4907bf6dd28e4ad308b47e&language=fr&sort_by=popularity.desc&include_adult=false&vote_count.gte=1000&page=1")
+        .get("https://api.themoviedb.org/3/discover/movie?api_key=8d2265a50d4907bf6dd28e4ad308b47e&language=fr&sort_by=popularity.desc&include_adult=false&vote_count.gte=1000&page=2")
         .then(secondAPIresponse => {
           secondAPIresponse.data.results.forEach(movie => {
             this.movies.push(movie)

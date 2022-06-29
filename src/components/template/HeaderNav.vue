@@ -1,11 +1,11 @@
 <template>
     <header class="HeaderNav">
         <div id="nav">
-            <router-link to="/" id="home">VueJS Movies</router-link>
+            <router-link to="/" id="home">Accueil</router-link>
             <router-link to="/frenchmovies">Films français</router-link>
             <router-link to="/americanmovies">Films américains</router-link>
             <router-link to="/lastmovies">Films sortis en 2022</router-link>
-            <router-link to="/top50movies">Le 50 films les mieux notés</router-link>
+            <router-link to="/top50movies">Les 50 films les mieux notés</router-link>
             <router-link to="/searchmovies">Rechercher un film</router-link>
         </div>
     </header>
@@ -25,6 +25,7 @@ export default {
     color: #fff;
     text-align: center;
     padding: 20px;
+    font-family: 'Yellowtail', cursive;
 }
 
 .HeaderNav #home {

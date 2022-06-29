@@ -1,7 +1,7 @@
 <template>
     <footer class="FooterApp">
         <div class="foot">
-            <p>Ce site vous pouvez trouver des millions de films et de séries TV.</p>
+            <p>Sur ce site vous pouvez trouver des millions de films et de séries TV.</p>
             <p>Explorer les différentes pages pour avoir accès à ce que vous préférer le plus !!!</p>
         </div>
     </footer>
@@ -21,6 +21,7 @@ export default {
     color: #fff;
     text-align: center;
     padding: 20px;
+    font-family: 'Yellowtail', cursive;
 }
 
 .foot{
