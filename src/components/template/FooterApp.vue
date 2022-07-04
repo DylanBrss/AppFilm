@@ -3,6 +3,7 @@
         <div class="foot">
             <p>Sur ce site vous pouvez trouver des millions de films et de séries TV.</p>
             <p>Explorer les différentes pages pour avoir accès à ce que vous préférer le plus !!!</p>
+            <p>All right reserved The Movie Data Base</p>
         </div>
     </footer>
 </template>
@@ -29,7 +30,7 @@ export default {
 }
 
 p:hover{
-    color: grey;
+    color: #ED1C24;
 }
 
 </style>

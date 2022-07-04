@@ -6,7 +6,7 @@
     <div class="container">
       <div v-if="$route.path == '/'">
         <!-- si la route est / (racine du site) -->
-        <h1 class="pt-5 font-weight-light">
+        <h1 class="title pt-5 font-weight-light">
           Vos films préférés sont sur CinéRama !
         </h1>
         <MoviesList :movies="movies" :loading="loading" :errored="errored" />
@@ -72,11 +72,12 @@ export default {
 }
 
 .topTitle {
-  font-family: 'Rubik Moonrocks', cursive;
+  font-family: 'Monoton', cursive;
   text-transform: uppercase;
   font-size: 70px;
   letter-spacing: 40px;
   word-spacing: 70px;
   padding-bottom: 20px;
+  color: #ED1C24;
 }
 </style>

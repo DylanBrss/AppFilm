@@ -1,6 +1,6 @@
 <template>
     <div class="lastmovies">
-        <h1 class="pt-5 fw-bold">Films sortis en 2022</h1>
+        <h1 class="title pt-5 fw-bold">Films sortis en 2022</h1>
         <SortButtons :movies="movies"></SortButtons>
         <MoviesList :movies="movies" :loading="loading" errored="errored"></MoviesList>
     </div>

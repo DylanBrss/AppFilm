@@ -2,7 +2,7 @@
     <div class="container">
         <router-link :to="`/MoviesDetails/${id}`" id="moviesdetails">
             <div class="card p-1 my-3 " style="width: 18rem;">
-                <h5 class="title fw-bold fst-italic text-white">{{ title }}</h5>
+                <h5 class="title fw-bold text-white">{{ title }}</h5>
                 <img v-bind:src="preUrl + poster_path" alt="moviePoster" />
                 <div class="card-body">
                     <p class="sorti text-white"><b>Sortie :</b> {{ release_date }}</p>

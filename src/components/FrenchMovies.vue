@@ -1,6 +1,6 @@
 <template>
   <div class="frenchmovies">
-    <h1 class="pt-5 fw-bold">Films français</h1>
+    <h1 class="title pt-5 fw-bold">Films français</h1>
     <SortButtons :movies="movies"/>
     <MoviesList :movies="movies" :loading="loading" errored="errored"></MoviesList>
   </div>

@@ -32,14 +32,18 @@ export default {
     color: #fff;
 }
 
+.HeaderNav #home:hover {
+    color: #ED1C24;
+}
+
 .HeaderNav a {
-    color: grey;
+    color: #fff;
     text-decoration: none;
     font-size: 20px;
 }
 
 .HeaderNav a:hover {
-    color: white;
+    color: #ED1C24;
 }
 
 #nav {

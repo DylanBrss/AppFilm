@@ -1,6 +1,6 @@
 <template>
     <div class="to50movies">
-        <h1 class="pt-5 fw-bold">Les 50 films les mieux notés</h1>
+        <h1 class="title pt-5 fw-bold">Les 50 films les mieux notés</h1>
         <SortButtons :movies="movies" />
         <MoviesList :movies="movies" :loading="loading" errored="errored"></MoviesList>
     </div>
