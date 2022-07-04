@@ -35,6 +35,7 @@ export default {
 .HeaderNav a {
     color: grey;
     text-decoration: none;
+    font-size: 20px;
 }
 
 .HeaderNav a:hover {
@@ -46,7 +47,13 @@ export default {
     justify-content: space-evenly;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .HeaderNav a{
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
     .HeaderNav #home {
         color: #fff;
     }

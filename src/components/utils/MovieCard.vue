@@ -19,7 +19,6 @@ export default {
     name: "MovieCard",
     props: [
         "id",
-        "index",
         "title",
         "release_date",
         "vote_average",

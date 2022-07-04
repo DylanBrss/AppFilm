@@ -1,8 +1,8 @@
 <template>
     <div class="search p-5">
-        <h1 class="p-5">Rechercher un film</h1>
+        <h1 class="p-5 fw-bold">Rechercher un film</h1>
         <input class="mb-5" type="text" v-model="search" @keyup="getSearch(search)" />
-        <SortButtons :movies="movies" @sort-movies="sortMovies" />
+        <SortButtons :movies="movies"/>
     </div>
     <MoviesList :movies="movies" :loading="loading" :errored="errored" />
 </template>
@@ -26,10 +26,6 @@ export default {
         };
     },
     methods: {
-        /* méthode qui trie les films*/
-        sortMovies(movies) {
-            this.movies = movies
-        },
 
         /* fonction qui affiche les films rechercher avec la value implémenter en paramètre */
         getSearch(search) {
