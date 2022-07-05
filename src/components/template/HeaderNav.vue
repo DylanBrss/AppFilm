@@ -58,15 +58,6 @@ export default {
 }
 
 @media screen and (max-width: 767px) {
-    .HeaderNav #home {
-        color: #fff;
-    }
-
-    .HeaderNav a {
-        color: grey;
-        text-decoration: none;
-    }
-
     #nav {
         display: flex;
         flex-direction: column;

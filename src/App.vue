@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      movies: null,
+      movies: [],
       loading: true,
       errored: false,
     }

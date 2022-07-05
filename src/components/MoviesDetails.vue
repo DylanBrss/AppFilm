@@ -16,15 +16,17 @@
                     </iframe>
                 </div>
                 <br>
+                <h5 class="fst-italic" v-if="movie.tagline != '' "> "{{ movie.tagline }}"</h5>
+                <br>
                 <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Date de sortie :</b> {{ movie.release_date }}</h4>
-                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Note moyenne :</b> {{ movie.vote_average }}/10</h4>
-                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Titre original :</b> {{ movie.original_title }}</h4>
-                <h4 class="text-md-start text-sm-center fs-6 text-uppercase py-1"><b class="text-capitalize">Langue <span class="text-lowercase">o</span>riginal :</b> {{
-                        movie.original_language
-                }}</h4>
-                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Résumé :</b> {{ movie.overview }}</h4>
-                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Budget :</b> {{ movie.budget }} <b>$</b></h4>
+                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Genres : </b><span v-for="genresN in movie.genres" v-bind:key="genresN.id"> {{ genresN.name }},&nbsp;</span></h4>
                 <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Durée du film :</b> {{ movie.runtime }} minutes</h4>
+                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Note :</b> {{ movie.vote_average }}/10</h4>
+                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Titre original :</b> {{ movie.original_title }}</h4>
+                <h4 class="text-md-start text-sm-center fs-6 text-uppercase py-1"><b class="text-capitalize">Langue <span class="text-lowercase">o</span>riginal :</b> {{ movie.original_language }}</h4>
+                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Résumé :</b> {{ movie.overview }}</h4>
+                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Productions : </b><span v-for="Prod in movie.production_companies" v-bind:key="Prod.id"> {{ Prod.name }},&nbsp;</span></h4>
+                <h4 class="text-md-start text-sm-center fs-6 py-1" v-if="movie.budget != 0"><b>Budget :</b> {{ movie.budget }}<b>$</b></h4>
             </div>
         </div>
     </div>
@@ -56,7 +58,7 @@ export default {
             .get("https://api.themoviedb.org/3/movie/" + this.movieId + "/videos?api_key=8d2265a50d4907bf6dd28e4ad308b47e&language=fr")
             .then((response) => {
                 this.video = response.data.results;
-                console.log(this.video);
+                // console.log(this.video);
             })
     },
 }
