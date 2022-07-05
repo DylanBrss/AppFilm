@@ -6,9 +6,9 @@
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 m-auto description">
                 <br>
-                <h4 class="title text-center text-uppercase"><b>{{ movie.title }}</b></h4>
-                <div class="mt-5" id="trailer" v-if="video[0]">
-                    <h4 class="text-start fs-6"><b>Regarder la bande annonce :</b></h4>
+                <h2 class="title text-center text-uppercase"><b>{{ movie.title }}</b></h2>
+                <div class="mt-3" id="trailer" v-if="video[0]">
+                    <h4 class="text-md-start text-sm-center fs-6"><b>Regarder la bande annonce :</b></h4>
                     <iframe width="650" height="300" v-bind:src="'https://www.youtube.com/embed/' + video[0].key"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -16,15 +16,15 @@
                     </iframe>
                 </div>
                 <br>
-                <h4 class="text-start fs-6 py-1"><b>Date de sortie :</b> {{ movie.release_date }}</h4>
-                <h4 class="text-start fs-6 py-1"><b>Note moyenne :</b> {{ movie.vote_average }}/10</h4>
-                <h4 class="text-start fs-6 py-1"><b>Titre original :</b> {{ movie.original_title }}</h4>
-                <h4 class="text-start fs-6 text-uppercase py-1"><b class="text-capitalize">Langue :</b> {{
+                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Date de sortie :</b> {{ movie.release_date }}</h4>
+                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Note moyenne :</b> {{ movie.vote_average }}/10</h4>
+                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Titre original :</b> {{ movie.original_title }}</h4>
+                <h4 class="text-md-start text-sm-center fs-6 text-uppercase py-1"><b class="text-capitalize">Langue <span class="text-lowercase">o</span>riginal :</b> {{
                         movie.original_language
                 }}</h4>
-                <h4 class="text-start fs-6 py-1"><b>Résumé :</b> {{ movie.overview }}</h4>
-                <h4 class="text-start fs-6 py-1"><b>Budget :</b> {{ movie.budget }} <b>$</b></h4>
-                <h4 class="text-start fs-6 py-1"><b>Durée du film :</b> {{ movie.runtime }} minutes</h4>
+                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Résumé :</b> {{ movie.overview }}</h4>
+                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Budget :</b> {{ movie.budget }} <b>$</b></h4>
+                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Durée du film :</b> {{ movie.runtime }} minutes</h4>
             </div>
         </div>
     </div>
@@ -63,6 +63,11 @@ export default {
 </script>
 
 <style>
+*{
+    padding: 0;
+    margin: 0;
+}
+
 #MoviePoster {
     height: 700px;
     width: 500px;
@@ -82,6 +87,15 @@ export default {
 @media screen and (max-width: 767px) {
     #MoviePoster {
         height: 400px;
+        width: 300px;
+    }
+
+    h4{
+        text-align: center;
+    }
+
+    iframe{
+        height: 200px;
         width: 300px;
     }
 }

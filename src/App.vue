@@ -80,4 +80,12 @@ export default {
   padding-bottom: 20px;
   color: #ED1C24;
 }
+
+@media screen and (max-width: 768px) {
+  .topTitle {
+    font-size: 42px;
+    letter-spacing: 10px;
+    word-spacing: 20px;
+  }
+}
 </style>
