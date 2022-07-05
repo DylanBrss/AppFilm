@@ -13,11 +13,7 @@ export default {
     props: [
         'movies'
     ],
-    emits: [
-        'sortNotes',
-        'sortDate',
-        'sortTitle'
-    ],
+
     data() {
         return {
             sortNoteDESC: false,

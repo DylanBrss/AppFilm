@@ -1,14 +1,35 @@
 <template>
-    <header class="HeaderNav">
-        <div id="nav">
-            <router-link to="/" id="home">Accueil</router-link>
-            <router-link to="/frenchmovies">Films français</router-link>
-            <router-link to="/americanmovies">Films américains</router-link>
-            <router-link to="/lastmovies">Films sortis en 2022</router-link>
-            <router-link to="/top50movies">Les 50 films les mieux notés</router-link>
-            <router-link to="/searchmovies">Rechercher un film</router-link>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <router-link to="/" id="home">Accueil</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/frenchmovies">Films français</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/americanmovies">Films américains</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/lastmovies">Films sortis en 2022</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/top50movies">Les 50 films les mieux notés</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/searchmovies">Rechercher un film</router-link>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
 </template>
 
 <script>
@@ -20,47 +41,28 @@ export default {
 </script>
 
 <style scoped>
-.HeaderNav {
+nav {
+    display: flex;
+    justify-content: center;
     background-color: #334;
+    padding: 20px 0;
+}
+
+#navbarNav {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+    margin: 50px;
     color: #fff;
-    text-align: center;
-    padding: 20px;
     font-family: 'Yellowtail', cursive;
 }
 
-.HeaderNav #home {
-    color: #fff;
-}
-
-.HeaderNav #home:hover {
+a:hover {
     color: #ED1C24;
-}
 
-.HeaderNav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.HeaderNav a:hover {
-    color: #ED1C24;
-}
-
-#nav {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px){
-    .HeaderNav a{
-        padding: 0 5px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    #nav {
-        display: flex;
-        flex-direction: column;
-    }
 }
 </style>
