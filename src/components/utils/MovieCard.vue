@@ -2,8 +2,8 @@
     <div class="container">
 
         <div class="card p-1 my-3 ">
-            <h5 class="title fw-bold text-white">{{ title }}</h5>
-            <p class="index fw-bold text-white text-start" v-if="$route.path == '/top50movies'" ><span v-once>#{{ index +1}}</span></p>
+            <h5 class="title fw-bold text-white"><span v-if="$route.path == '/top50movies'" ></span><span v-once>#{{ index +1}}</span> &nbsp; {{ title }}</h5>
+            <p class="index fw-bold text-white text-start" ></p>
             <img v-bind:src="preUrl + poster_path" alt="moviePoster" />
             <div class="card-body">
                 <p class="sorti text-white"><b>Sortie :</b> {{ release_date }}</p>
