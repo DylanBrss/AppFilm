@@ -15,6 +15,7 @@
                         allowfullscreen class="shadow">
                     </iframe>
                 </div>
+                <br>
                 <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Date de sortie :</b> {{ movie.release_date }}</h4>
                 <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Genres : </b><span v-for="genresN in movie.genres" v-bind:key="genresN.id"> {{ genresN.name }},&nbsp;</span></h4>
                 <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Durée du film :</b> {{ movie.runtime }} minutes</h4>
