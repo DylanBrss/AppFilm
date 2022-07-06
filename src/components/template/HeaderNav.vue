@@ -1,8 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -36,7 +37,7 @@ nav {
     padding: 20px 0;
 }
 
-#navbarNavAltMarkup{
+#navbarNavAltMarkup {
     padding: 0 50px;
 }
 

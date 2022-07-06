@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    
     <h1 class="topTitle">Cinérama</h1>
     <HeaderNav />
 
