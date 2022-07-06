@@ -25,7 +25,7 @@ export default {
       errored: false,
     };
   },
-  methode: {
+  methods: {
     sortMovies(movie) {
       this.movies = movie
     }

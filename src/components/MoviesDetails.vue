@@ -17,7 +17,7 @@
                 </div>
                 <br>
                 <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Date de sortie :</b> {{ movie.release_date }}</h4>
-                <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Genres : </b><span v-for="genresN in movie.genres" v-bind:key="genresN.id"> {{ genresN.name }},&nbsp;</span></h4>
+                <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Genres : </b><span v-for="(genresN, index) in movie.genres" v-bind:key="genresN.id"> {{ genresN.name }}<span v-if="index < movie.genres.length - 1 ">,</span>&nbsp;</span></h4>
                 <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Durée du film :</b> {{ movie.runtime }} minutes</h4>
                 <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Note :</b> {{ movie.vote_average }}/10</h4>
                 <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Titre original :</b> {{ movie.original_title }}</h4>
@@ -50,7 +50,7 @@ export default {
             .get("https://api.themoviedb.org/3/movie/" + this.movieId + "?api_key=8d2265a50d4907bf6dd28e4ad308b47e&language=fr")
             .then(response => {
                 this.movie = response.data;
-                console.log(this.movie)
+                // console.log(this.movie)
             })
         axios
             .get("https://api.themoviedb.org/3/movie/" + this.movieId + "/videos?api_key=8d2265a50d4907bf6dd28e4ad308b47e&language=fr")

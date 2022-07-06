@@ -54,7 +54,6 @@ export default {
           secondAPIresponse.data.results.forEach(movie => {
             this.movies.push(movie)
           })
-          // console.log(this.movies)
         })
   }
 }
