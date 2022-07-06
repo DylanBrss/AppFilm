@@ -2,6 +2,7 @@
     <div class="container-fluid mb-4">
         <div class="row">
             <h2 class="title text-center text-uppercase mt-5"><b>{{ movie.title }}</b></h2>
+            <h5 class="fst-italic mb-5" v-if="movie.tagline != '' "> "{{ movie.tagline }}"</h5>
             <div class="col-lg-6 col-md-12 col-sm-12 m-auto image">
                 <img v-bind:src="preUrlImg + movie.poster_path" alt="moviePoster" id="MoviePoster" />
             </div>
@@ -14,9 +15,6 @@
                         allowfullscreen class="shadow">
                     </iframe>
                 </div>
-                <br>
-                <h5 class="fst-italic" v-if="movie.tagline != '' "> "{{ movie.tagline }}"</h5>
-                <br>
                 <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Date de sortie :</b> {{ movie.release_date }}</h4>
                 <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Genres : </b><span v-for="genresN in movie.genres" v-bind:key="genresN.id"> {{ genresN.name }},&nbsp;</span></h4>
                 <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Durée du film :</b> {{ movie.runtime }} minutes</h4>
