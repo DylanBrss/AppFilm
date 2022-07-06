@@ -6,7 +6,7 @@
     <div class="container">
       <div v-if="$route.path == '/'">
         <!-- si la route est / (racine du site) -->
-        <h1 class="title pt-5 font-weight-light">
+        <h1 class="title pt-5 fw-bold">
           Vos films préférés sont sur CinéRama !
         </h1>
         <MoviesList :movies="movies" :loading="loading" :errored="errored" />

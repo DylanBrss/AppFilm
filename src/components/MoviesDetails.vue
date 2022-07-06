@@ -1,14 +1,13 @@
 <template>
-    <div class="container-fluid m-4">
+    <div class="container-fluid mb-4">
         <div class="row">
+            <h2 class="title text-center text-uppercase mt-5"><b>{{ movie.title }}</b></h2>
             <div class="col-lg-6 col-md-12 col-sm-12 m-auto image">
                 <img v-bind:src="preUrlImg + movie.poster_path" alt="moviePoster" id="MoviePoster" />
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 m-auto description">
-                <br>
-                <h2 class="title text-center text-uppercase"><b>{{ movie.title }}</b></h2>
-                <div class="mt-3" id="trailer" v-if="video[0]">
-                    <h4 class="text-md-start text-sm-center fs-6"><b>Regarder la bande annonce :</b></h4>
+                <div class="mt-5" id="trailer" v-if="video[0]">
+                    <h4 class="text-lg-start text-md-center fs-6"><b>Regarder la bande annonce :</b></h4>
                     <iframe width="650" height="300" v-bind:src="'https://www.youtube.com/embed/' + video[0].key"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -18,15 +17,15 @@
                 <br>
                 <h5 class="fst-italic" v-if="movie.tagline != '' "> "{{ movie.tagline }}"</h5>
                 <br>
-                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Date de sortie :</b> {{ movie.release_date }}</h4>
-                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Genres : </b><span v-for="genresN in movie.genres" v-bind:key="genresN.id"> {{ genresN.name }},&nbsp;</span></h4>
-                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Durée du film :</b> {{ movie.runtime }} minutes</h4>
-                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Note :</b> {{ movie.vote_average }}/10</h4>
-                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Titre original :</b> {{ movie.original_title }}</h4>
-                <h4 class="text-md-start text-sm-center fs-6 text-uppercase py-1"><b class="text-capitalize">Langue <span class="text-lowercase">o</span>riginal :</b> {{ movie.original_language }}</h4>
-                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Résumé :</b> {{ movie.overview }}</h4>
-                <h4 class="text-md-start text-sm-center fs-6 py-1"><b>Productions : </b><span v-for="Prod in movie.production_companies" v-bind:key="Prod.id"> {{ Prod.name }},&nbsp;</span></h4>
-                <h4 class="text-md-start text-sm-center fs-6 py-1" v-if="movie.budget != 0"><b>Budget :</b> {{ movie.budget }}<b>$</b></h4>
+                <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Date de sortie :</b> {{ movie.release_date }}</h4>
+                <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Genres : </b><span v-for="genresN in movie.genres" v-bind:key="genresN.id"> {{ genresN.name }},&nbsp;</span></h4>
+                <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Durée du film :</b> {{ movie.runtime }} minutes</h4>
+                <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Note :</b> {{ movie.vote_average }}/10</h4>
+                <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Titre original :</b> {{ movie.original_title }}</h4>
+                <h4 class="text-lg-start text-md-center fs-6 text-uppercase py-1"><b class="text-capitalize">Langue <span class="text-lowercase">o</span>riginal :</b> {{ movie.original_language }}</h4>
+                <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Résumé :</b><br>{{ movie.overview }}</h4>
+                <h4 class="text-lg-start text-md-center fs-6 py-1"><b>Productions : </b><br><span v-for="Prod in movie.production_companies" v-bind:key="Prod.id"> {{ Prod.name }},&nbsp;</span></h4>
+                <h4 class="text-lg-start text-md-center fs-6 py-1" v-if="movie.budget != 0"><b>Budget :</b> {{ movie.budget }}<b>$</b></h4>
             </div>
         </div>
     </div>
@@ -71,8 +70,8 @@ export default {
 }
 
 #MoviePoster {
-    height: 700px;
-    width: 500px;
+    height: 800px;
+    width: 600px;
 }
 
 .title {
