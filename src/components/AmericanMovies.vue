@@ -26,7 +26,7 @@ export default {
     };
   },
   methode: {
-    sortMovies(movie){
+    sortMovies(movie) {
       this.movies = movie
     }
   },

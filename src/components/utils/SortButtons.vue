@@ -26,10 +26,10 @@ export default {
             let movielist = this.movies;
             if (this.sortNoteDESC == false) {
                 movielist.sort(function sortArray(movie1, movie2) {
-                    if (movie1.vote_average > movie2.vote_average) {
+                    if (movie1.vote_average < movie2.vote_average) {
                         return -1
                     }
-                    if (movie1.vote_average < movie2.vote_average) {
+                    if (movie1.vote_average > movie2.vote_average) {
                         return 1
                     }
                     return 0
@@ -38,10 +38,10 @@ export default {
             }
             if (this.sortNoteDESC == true) {
                 movielist.sort(function sortArray(movie1, movie2) {
-                    if (movie1.vote_average < movie2.vote_average) {
+                    if (movie1.vote_average > movie2.vote_average) {
                         return -1
                     }
-                    if (movie1.vote_average > movie2.vote_average) {
+                    if (movie1.vote_average < movie2.vote_average) {
                         return 1
                     }
                     return 0
@@ -53,10 +53,10 @@ export default {
             let movielist = this.movies
             if (this.sortDateDESC == false) {
                 movielist.sort(function sortArray(movie1, movie2) {
-                    if (movie1.release_date > movie2.release_date) {
+                    if (movie1.release_date < movie2.release_date) {
                         return -1
                     }
-                    if (movie1.release_date < movie2.release_date) {
+                    if (movie1.release_date > movie2.release_date) {
                         return 1
                     }
                     return 0
@@ -65,10 +65,10 @@ export default {
             }
             if (this.sortDateDESC == true) {
                 movielist.sort(function sortArray(movie1, movie2) {
-                    if (movie1.release_date < movie2.release_date) {
+                    if (movie1.release_date > movie2.release_date) {
                         return -1
                     }
-                    if (movie1.release_date > movie2.release_date) {
+                    if (movie1.release_date < movie2.release_date) {
                         return 1
                     }
                     return 0
@@ -80,10 +80,10 @@ export default {
             let movielist = this.movies
             if (this.sortTitleDESC == false) {
                 movielist.sort(function sortArray(movie1, movie2) {
-                    if (movie1.title > movie2.title) {
+                    if (movie1.title < movie2.title) {
                         return -1
                     }
-                    if (movie1.title < movie2.title) {
+                    if (movie1.title > movie2.title) {
                         return 1
                     }
                     return 0
@@ -92,10 +92,10 @@ export default {
             }
             if (this.sortTitleDESC == true) {
                 movielist.sort(function sortArray(movie1, movie2) {
-                    if (movie1.title < movie2.title) {
+                    if (movie1.title > movie2.title) {
                         return -1
                     }
-                    if (movie1.title > movie2.title) {
+                    if (movie1.title < movie2.title) {
                         return 1
                     }
                     return 0

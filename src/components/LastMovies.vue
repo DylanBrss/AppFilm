@@ -1,8 +1,8 @@
 <template>
     <div class="lastmovies">
         <h1 class="title pt-5 fw-bold">Films sortis en 2022</h1>
-        <SortButtons :movies="movies"></SortButtons>
-        <MoviesList :movies="movies" :loading="loading" errored="errored"></MoviesList>
+        <SortButtons :movies="movies" />
+        <MoviesList :movies="movies" :loading="loading" errored="errored" />
     </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
     },
     data() {
         return {
-            movies:  [],
+            movies: [],
             loading: true,
             errored: false,
         };
